@@ -1,0 +1,13 @@
+[package]
+name = "rust-weather-cli"
+version = "0.1.0"
+authors = ["rakh1213 <rail.khamitov@netcracker.com>"]
+edition = "2018"
+readme = " Simple Weather command line client"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = "0.9.20"
+serde = "1.0.101"
