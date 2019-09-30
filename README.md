@@ -10,3 +10,10 @@ Please wait....
 Correct temp is 14°C
 user1:~ |
 ```
+
+## TO-DO list
+
+- Add precipitation information
+- Add wind direction information
+
+## Change Log
