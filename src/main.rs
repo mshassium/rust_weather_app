@@ -12,10 +12,18 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("You city name is: {}\nPlease wait....",line);
     let resp: String = reqwest::get(&utils::weather_url(line))?.text()?;
     let resp_value: serde_json::value::Value = serde_json::from_str(&resp)?;
-    let final_temp_string = resp_value.get("main")
-                            .and_then(|value| value.get("temp"))
-                            .and_then(|value| value.as_f64())
-                            .and_then(|value| Some(value - kelvin_value));
-    println!("Correct temp is {:.0}°C", final_temp_string.unwrap());
+    let cod = resp_value.get("cod").unwrap();
+    let final_temp_string = 
+        if cod == 200{
+              format!("Correct temp is {}°C",resp_value.get("main")
+                        .and_then(|value| value.get("temp"))
+                        .and_then(|value| value.as_f64())
+                        .and_then(|value| Some((value - kelvin_value).round()))
+                        .and_then(|value| Some(value.to_string())).unwrap())
+                    }
+        else {
+            format!("Error: {}",resp_value.get("message").and_then(|value| Some(value.to_string())).unwrap())
+        };
+    println!("{}", final_temp_string);
     Ok(())
 }
