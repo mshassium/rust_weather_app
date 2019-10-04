@@ -15,6 +15,7 @@ enum AppMode {
 }
 
 fn main() {
+    let version: &str = env!("CARGO_PKG_VERSION");
     println!(
         "Hello {}, please chose what do you want.",
         whoami::username()

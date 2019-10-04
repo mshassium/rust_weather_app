@@ -1,6 +1,6 @@
 [package]
 name = "rust-weather-cli"
-version = "0.1.0"
+version = "0.0.1"
 authors = ["rakh1213 <rail.khamitov@netcracker.com>"]
 edition = "2018"
 readme = " Simple Weather command line client"
@@ -13,3 +13,4 @@ reqwest = "0.9.21"
 serde = "1.0.101"
 serde_json = "1.0.41"
 whoami = "0.5.3"
+clap = "2.33.0"
