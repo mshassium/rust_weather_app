@@ -20,11 +20,13 @@ fn main() {
         whoami::username()
     );
     loop {
-        println!("****************************************");
-        println!("1 = Write city name and see current weather");
-        println!("2 = Write city name, day count and see weather for this period");
-        println!("3 = Exit :)");
-        println!("****************************************");
+        println!();
+        println!("🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵");
+        println!("✳ 1 = Write city name and see current weather");
+        println!("✳ 2 = Write city name, day count and see weather for this period");
+        println!("✳ 3 = Exit :)");
+        println!("🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵");
+        println!();
         let mut request_mod_string: String = String::new();
         let mut app_mod: AppMode = AppMode::Exit;
         match io::stdin().read_line(&mut request_mod_string) {
@@ -40,7 +42,7 @@ fn main() {
         }
         let app_result_message: String = match app_mod {
             AppMode::CurrentWeather => current_weather(),
-            AppMode::DayTimeWeather => String::from("Day Time Weather"),
+            AppMode::DayTimeWeather => day_time_weather(),
             AppMode::Exit => {
                 println!("Bye");
                 break;
@@ -51,9 +53,14 @@ fn main() {
     }
 }
 
+fn day_time_weather() -> String{
+
+    String::from("😁 Ну типа я работаю, но как бы нет 😁")
+}
+
 fn current_weather() -> String {
     let mut city_name: String = String::new();
-    println!("Please write city name");
+    println!("⁉ Please write city name");
     match io::stdin().read_line(&mut city_name) {
         Err(error) => println!("{}", error),
         _ => print!("{}", ""),
