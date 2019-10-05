@@ -37,7 +37,7 @@ fn day_time_weather() -> String {
 
 fn current_weather(city_name: String) -> String {
     println!(
-        "👋 Hi {}, 🕵 searching weather in{} 🏙️",
+        "👋 Hi {}, 🕵 searching weather in {} 🏙️",
         whoami::username(),
         city_name
     );
@@ -49,7 +49,7 @@ fn current_weather(city_name: String) -> String {
     let cod = resp_value.get("cod").unwrap();
     let final_temp_string = if cod == 200 {
         format!(
-            "📅 {} \n⭐ In{}: {}°C",
+            "\n📅 {} \n⭐ In {}: {}°C",
             Utc::now().format("%d.%m.%Y"),
             &city_name,
             resp_value
