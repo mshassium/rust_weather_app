@@ -1,0 +1,25 @@
+name: rweather
+version: "1.0"
+author: Rail Khamitov
+about: Rust weather application
+args:
+    - city:
+        short: c
+        value_name: city name
+        help: City names for which it is necessary to determine the weather. Example# <saratov,samara, san paolo>
+        required: true
+        multiple: true
+    - day_count:
+        short: dc
+        value_name: number of days
+        required: false
+        help: Please set count day for whom it is necessary to show the weather, by default 0 (it means current weather) Example# <3>
+subcommands:
+    - check_api:
+        about: check access weather API
+        version: "1.3"
+        author: Someone E. <someone_else@other.com>
+        args:
+            - debug:
+                short: d
+                help: print debug information

@@ -1,7 +1,7 @@
 #!/bin/bash
 echo Publish start
 cargo build
-mv ../../target/debug/rust-weather-cli ./rweather
+mv ../../target/debug/rweather ./rweather
 git add ../../.
 git commit -m "publish new build"
 git push origin master

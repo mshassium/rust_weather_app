@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(OSX) Launch",
+            "name": "rweather with Saratov city",
             "type": "lldb",
             "request": "launch",
             "preLaunchTask": "rust build",
             "program": "${workspaceRoot}/target/debug/rust-weather-cli",
-            "args": [],
+            "args": ["-csaratov"],
             "cwd": "${workspaceRoot}",
         }
     ]
