@@ -62,11 +62,12 @@ fn current_weather(city_name: String) -> String {
         )
     } else {
         format!(
-            "Error: {}",
+            "Error: {} for city: {}",
             resp_value
                 .get("message")
                 .and_then(|value| Some(value.to_string()))
-                .unwrap()
+                .unwrap(),
+                &city_name
         )
     };
     final_temp_string

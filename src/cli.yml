@@ -11,6 +11,7 @@ args:
         multiple: true
     - day_count:
         short: dc
+        long: days
         value_name: number of days
         required: false
         help: Please set count day for whom it is necessary to show the weather, by default 0 (it means current weather) Example# <3>

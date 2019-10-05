@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "rust build",
             "program": "${workspaceRoot}/target/debug/rweather",
-            "args": ["-c saratov"],
+            "args": ["-c san paolo"],
             "cwd": "${workspaceRoot}",
         }
     ]
