@@ -1,5 +1,5 @@
 name: rweather
-version: "1.0"
+version: "0.0.1"
 author: Rail Khamitov
 about: Rust weather application
 args:
