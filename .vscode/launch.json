@@ -9,8 +9,8 @@
             "type": "lldb",
             "request": "launch",
             "preLaunchTask": "rust build",
-            "program": "${workspaceRoot}/target/debug/rust-weather-cli",
-            "args": ["-csaratov"],
+            "program": "${workspaceRoot}/target/debug/rweather",
+            "args": ["-c saratov"],
             "cwd": "${workspaceRoot}",
         }
     ]
