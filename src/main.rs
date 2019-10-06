@@ -4,11 +4,11 @@ extern crate rweather;
 #[macro_use]
 extern crate clap;
 
+use chrono::Utc;
 use clap::App;
 use rweather::utils;
 use serde_json;
 use whoami;
-use chrono::{Utc};
 
 const KELVIN: f64 = 273.15;
 
@@ -24,23 +24,36 @@ fn main() {
         .unwrap_or("0")
         .parse()
         .unwrap();
+    println!(
+        "👋 Hi {}, 🕵 searching weather in {} 🏙️ on {} days",
+        whoami::username(),
+        city,
+        day_count
+    );
     let result: String = match day_count {
         0 | 1 => current_weather(city),
-        _ => day_time_weather(),
+        _ => day_time_weather(city, day_count),
     };
     println!("{}", result);
 }
 
-fn day_time_weather() -> String {
-    String::from("😁 Ну типа я работаю, но как бы нет 😁")
+fn day_time_weather(city_name: String, day_count: u32) -> String {
+    let resp: String = reqwest::get(&utils::daytime_weather_url(&city_name, day_count))
+        .unwrap()
+        .text()
+        .unwrap();
+    let resp_value: serde_json::value::Value = serde_json::from_str(&resp).unwrap();
+    let cod = resp_value.get("cod").unwrap();
+    return String::from(format!(
+        "😁 Ну типа я нашел погоду для города {} на {} дней 😁\n Cod: {}\n Result: {}",
+        city_name,
+        day_count,
+        cod,
+        resp_value
+    ));
 }
 
 fn current_weather(city_name: String) -> String {
-    println!(
-        "👋 Hi {}, 🕵 searching weather in {} 🏙️",
-        whoami::username(),
-        city_name
-    );
     let resp: String = reqwest::get(&utils::current_weather_url(&city_name))
         .unwrap()
         .text()
@@ -67,7 +80,7 @@ fn current_weather(city_name: String) -> String {
                 .get("message")
                 .and_then(|value| Some(value.to_string()))
                 .unwrap(),
-                &city_name
+            &city_name
         )
     };
     final_temp_string
