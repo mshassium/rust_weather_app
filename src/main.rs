@@ -46,10 +46,7 @@ fn day_time_weather(city_name: String, day_count: u32) -> String {
     let cod = resp_value.get("cod").unwrap();
     return String::from(format!(
         "😁 Ну типа я нашел погоду для города {} на {} дней 😁\n Cod: {}\n Result: {}",
-        city_name,
-        day_count,
-        cod,
-        resp_value
+        city_name, day_count, cod, resp_value
     ));
 }
 
