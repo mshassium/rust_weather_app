@@ -1,0 +1,180 @@
+{
+    "city": {
+        "coord": {
+            "lat": 45.4348,
+            "lon": 8.6003
+        },
+        "country": "IT",
+        "id": 3172188,
+        "name": "San Paolo",
+        "population": 368864,
+        "sunrise": 1570426235,
+        "sunset": 1570467374,
+        "timezone": 7200
+    },
+    "cnt": 5,
+    "cod": "200",
+    "list": [
+        {
+            "clouds": {
+                "all": 0
+            },
+            "dt": 1570471200,
+            "dt_txt": "2019-10-07 18:00:00",
+            "main": {
+                "grnd_level": 994.28,
+                "humidity": 54,
+                "pressure": 1017.01,
+                "sea_level": 1017.01,
+                "temp": 287.27,
+                "temp_kf": -0.73,
+                "temp_max": 288,
+                "temp_min": 287.27
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "weather": [
+                {
+                    "description": "clear sky",
+                    "icon": "01n",
+                    "id": 800,
+                    "main": "Clear"
+                }
+            ],
+            "wind": {
+                "deg": 341.302,
+                "speed": 0.83
+            }
+        },
+        {
+            "clouds": {
+                "all": 0
+            },
+            "dt": 1570482000,
+            "dt_txt": "2019-10-07 21:00:00",
+            "main": {
+                "grnd_level": 996.72,
+                "humidity": 70,
+                "pressure": 1018.73,
+                "sea_level": 1018.73,
+                "temp": 285.91,
+                "temp_kf": -0.55,
+                "temp_max": 286.464,
+                "temp_min": 285.91
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "weather": [
+                {
+                    "description": "clear sky",
+                    "icon": "01n",
+                    "id": 800,
+                    "main": "Clear"
+                }
+            ],
+            "wind": {
+                "deg": 42.453,
+                "speed": 2.21
+            }
+        },
+        {
+            "clouds": {
+                "all": 0
+            },
+            "dt": 1570492800,
+            "dt_txt": "2019-10-08 00:00:00",
+            "main": {
+                "grnd_level": 997.76,
+                "humidity": 61,
+                "pressure": 1019.19,
+                "sea_level": 1019.19,
+                "temp": 284.38,
+                "temp_kf": -0.37,
+                "temp_max": 284.75,
+                "temp_min": 284.38
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "weather": [
+                {
+                    "description": "clear sky",
+                    "icon": "01n",
+                    "id": 800,
+                    "main": "Clear"
+                }
+            ],
+            "wind": {
+                "deg": 12.106,
+                "speed": 3.41
+            }
+        },
+        {
+            "clouds": {
+                "all": 17
+            },
+            "dt": 1570503600,
+            "dt_txt": "2019-10-08 03:00:00",
+            "main": {
+                "grnd_level": 998,
+                "humidity": 59,
+                "pressure": 1018.99,
+                "sea_level": 1018.99,
+                "temp": 284.27,
+                "temp_kf": -0.18,
+                "temp_max": 284.449,
+                "temp_min": 284.27
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "weather": [
+                {
+                    "description": "few clouds",
+                    "icon": "02n",
+                    "id": 801,
+                    "main": "Clouds"
+                }
+            ],
+            "wind": {
+                "deg": 21.299,
+                "speed": 3.09
+            }
+        },
+        {
+            "clouds": {
+                "all": 45
+            },
+            "dt": 1570514400,
+            "dt_txt": "2019-10-08 06:00:00",
+            "main": {
+                "grnd_level": 998.5,
+                "humidity": 57,
+                "pressure": 1019.05,
+                "sea_level": 1019.05,
+                "temp": 285.883,
+                "temp_kf": 0,
+                "temp_max": 285.883,
+                "temp_min": 285.883
+            },
+            "sys": {
+                "pod": "d"
+            },
+            "weather": [
+                {
+                    "description": "scattered clouds",
+                    "icon": "03d",
+                    "id": 802,
+                    "main": "Clouds"
+                }
+            ],
+            "wind": {
+                "deg": 34.438,
+                "speed": 1.76
+            }
+        }
+    ],
+    "message": 0.0093
+}

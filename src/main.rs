@@ -44,9 +44,11 @@ fn day_time_weather(city_name: String, day_count: u32) -> String {
         .unwrap();
     let resp_value: serde_json::value::Value = serde_json::from_str(&resp).unwrap();
     let cod = resp_value.get("cod").unwrap();
+    let default_list_weather = serde_json::json!("");
+    let list_weather = resp_value.get("list").unwrap_or(&default_list_weather);
     return String::from(format!(
-        "😁 Ну типа я нашел погоду для города {} на {} дней 😁\n Cod: {}\n Result: {}",
-        city_name, day_count, cod, resp_value
+        "😁 Ну типа я нашел погоду для города {} на {} дней 😁\n Cod: {}\n Result: {:?}",
+        city_name, day_count, cod, list_weather
     ));
 }
 

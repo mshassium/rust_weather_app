@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 46.03,
+        "lat": 51.53
+    },
+    "weather": [
+        {
+            "id": 501,
+            "main": "Rain",
+            "description": "moderate rain",
+            "icon": "10n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 281.48,
+        "pressure": 1016,
+        "humidity": 97,
+        "temp_min": 281.48,
+        "temp_max": 281.48
+    },
+    "wind": {
+        "speed": 0.45,
+        "deg": 209,
+        "gust": 2.24
+    },
+    "rain": {
+        "3h": 3.438
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1570566526,
+    "sys": {
+        "type": 3,
+        "id": 2001834,
+        "message": 0.0075,
+        "country": "RU",
+        "sunrise": 1570590520,
+        "sunset": 1570630657
+    },
+    "timezone": 14400,
+    "id": 498677,
+    "name": "Saratov",
+    "cod": 200
+}
